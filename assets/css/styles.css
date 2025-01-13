@@ -1,57 +1,154 @@
-    /* General Styles */
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        background: #f4f4f9;
-        color: #2c3e50; /* Darker gray-blue */
-        font-size: 1rem;
-    }
+ /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    h1, h2, h3 {
-        margin: 0 0 20px;
-        font-weight: 600;
-    }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    background: #1f3a6b; /* Deep Blue */
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    /* Header */
+header .logo {
+    margin-right: auto; /* Pushes the logo to the left side */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    color: #a4c9e6; /* Light Blue */
+}
+
+/* Mobile menu icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: flex-start; /* Align content to the top-left */
+    justify-content: flex-start; /* Align content to the left */
+    flex-direction: column; /* Stacks content vertically */
+    height: 100vh;
+    background: linear-gradient(135deg, #1f3a6b, #4a6fa5);
+    color: #fff;
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.6; /* Improves readability */
+    word-wrap: break-word; /* Ensures text wraps */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3a5b94;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a4c9e6;
+    color: #3a5b94; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     header {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding: 10px 20px;
-        background: #1f3a6b; /* Deep Blue */
-        color: #FFFFFF;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
     }
 
     header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-    }
-
-    header nav ul li a {
-        color: #FFFFFF;
-    }
-
-    header nav ul li a:hover {
-        color: #a4c9e6; /* Light Blue */
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu-icon {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
+        display: block;
+        margin-top: 10px;
     }
+
+    .home {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* When screen width is small, display the menu toggle (hamburger) */
+    header nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header nav ul li {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    /* Show the menu when active */
+    header nav.active ul {
+        display: flex;
+    }
+}
+
 /* Home Section Styles */
 .home {
     display: flex;
@@ -95,7 +192,8 @@
 }
 
 .cta-button:hover {
-    background-color: #ff3b2f;
+    background-color: #a4c9e6;
+    color: #3a5b94; 
 }
 
     /* Portfolio Section */
@@ -420,4 +518,22 @@
         padding: 15px;
         font-size: 16px; /* Adjusted font size for readability */
     }
+}
+/* General Link Styles */
+a {
+    color: #FFFFFF; /* White for normal links */
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #a4c9e6; /* Light Blue for hover state */
+}
+
+/* Contact Section Links */
+#contact a {
+    color: white; /* Set link color to white */
+}
+
+#contact a:hover {
+    color: #f39c12; /* Color change on hover (optional) */
 }
