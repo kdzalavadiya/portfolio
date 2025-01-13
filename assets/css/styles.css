@@ -98,6 +98,38 @@ header nav ul li a:hover {
     background-color: #a4c9e6;
     color: #3a5b94; 
 }
+/* Mobile menu style */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#navbar {
+    display: none; /* Hide menu by default */
+}
+
+#navbar.active {
+    display: block; /* Show menu when 'active' class is added */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu items by default */
+    }
+
+    header nav ul.active {
+        display: flex; /* Display menu items when 'active' class is added */
+    }
+
+    .menu-icon {
+        display: block;
+        margin-top: 10px;
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
