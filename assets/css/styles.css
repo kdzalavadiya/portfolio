@@ -508,7 +508,7 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
     .social-card {
         display: block;
-        width: 90%;
+        width: 100%;
         margin-bottom: 20px; /* Increased spacing between buttons */
     }
     .social-card a {
