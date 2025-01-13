@@ -50,7 +50,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
+}); 
 
 // Chart 1 - Bar Chart
 const ctx1 = document.getElementById('chart1').getContext('2d');
