@@ -2,6 +2,22 @@
 document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
+// assets/js/scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+});
+// Script to toggle the navigation menu on smaller screens
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('header nav');
+
+menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
 
 // Resume Modal Toggle
 const resumeToggle = document.getElementById('resume-toggle');
