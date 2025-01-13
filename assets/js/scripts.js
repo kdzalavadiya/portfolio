@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 });
+
 // Script to toggle the navigation menu on smaller screens
 const menuIcon = document.querySelector('.menu-icon');
 const nav = document.querySelector('header nav');
@@ -19,28 +20,25 @@ menuIcon.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
-// Resume Modal Toggle
 const resumeToggle = document.getElementById('resume-toggle');
-const resumeModal = document.getElementById('resume-modal');
+const modal = document.getElementById('resume-modal');
 const closeModal = document.querySelector('.close-modal');
 
-// Show modal when "Resume" is clicked
-resumeToggle.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    resumeModal.style.display = 'block';
+resumeToggle.addEventListener('click', function() {
+    modal.style.display = 'block';
 });
 
-// Hide modal when close button is clicked
-closeModal.addEventListener('click', () => {
-    resumeModal.style.display = 'none';
+closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
 });
 
-// Hide modal when clicking outside the modal
-window.addEventListener('click', (event) => {
-    if (event.target === resumeModal) {
-        resumeModal.style.display = 'none';
+// Close modal if clicked outside of the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
     }
 });
+
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -50,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-}); 
+});
 
 // Chart 1 - Bar Chart
 const ctx1 = document.getElementById('chart1').getContext('2d');
