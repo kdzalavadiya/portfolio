@@ -17,12 +17,12 @@
             <h1>My Portfolio</h1>
         </div>
         <nav>
-            <div class="menu-icon">&#9776;</div>
+            <div class="menu-icon"  onclick="toggleMenu()">&#9776;</div>
             <ul class="nav-links">
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#home" onclick="closeMenu()"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#portfolio" onclick="closeMenu()"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#skills" onclick="closeMenu()"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#contact" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="#" id="resume-toggle"><i class="fas fa-file-pdf"></i> Resume</a></li>
             </ul>
         </nav>
@@ -126,5 +126,17 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+        }
+    
+        function closeMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.remove('active'); // Remove the 'active' class to hide the menu
+        }
+    </script>
+    
 </body>
 </html>
