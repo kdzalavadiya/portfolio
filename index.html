@@ -11,30 +11,49 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>My Portfolio</h1>
-        </div>
-        <nav>
-            <div class="menu-icon"  onclick="toggleMenu()">&#9776;</div>
-            <ul class="nav-links">
-                <li><a href="#home" onclick="closeMenu()"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#portfolio" onclick="closeMenu()"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="#skills" onclick="closeMenu()"><i class="fas fa-code"></i> Skills</a></li>
-                <li><a href="#contact" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="#" id="resume-toggle"><i class="fas fa-file-pdf"></i> Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Resume Modal -->
-    <div id="resume-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <iframe src="assets/pdf/resume.pdf" width="100%" height="600px"></iframe>
-        </div>
+    <!-- Desktop Header -->
+<header class="desktop-header">
+    <div class="logo">
+        <h1>My Portfolio</h1>
     </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#" id="resume-toggle"><i class="fas fa-file-pdf"></i> Resume</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Mobile Header -->
+<header class="mobile-header">
+    <div class="logo">
+        <h1>My Portfolio</h1>
+    </div>
+    <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="#home" onclick="closeSidebar()"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#portfolio" onclick="closeSidebar()"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="#skills" onclick="closeSidebar()"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#contact" onclick="closeSidebar()"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#" id="resume-toggle-mobile" onclick="closeSidebar()"><i class="fas fa-file-pdf"></i> Resume</a></li>
+        </ul>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay" onclick="closeSidebar()"></div>
+</header>
+
+  <!-- Resume Modal -->
+<div id="resume-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeResumeModal()">&times;</span>
+        <iframe src="assets/pdf/resume.pdf" width="100%" height="100%"></iframe>
+    </div>
+</div>
 
     <!-- Home Section -->
     <section id="home" class="home">
